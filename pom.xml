@@ -18,5 +18,6 @@
     <module>framework-test</module>
     <module>framework-starter</module>
     <module>framework-archetype</module>
+    <module>framework-search</module>
   </modules>
 </project>
