@@ -47,6 +47,20 @@ public class AppTest
     {
         assertTrue( true );
     }
+    public void testAttachmentCreated()
+    {
+        CommonLogger.consolePrint("run in test attachment");
+        ElasticSearchClient client = new ElasticSearchClient("47.105.127.77",9200);
+        String mapping = "{\"AttachmentContent\":{\"properties\":{\"filename\":{\"type\":\"text\",\"store\":\"true\",\"term_vector\":\"with_positions_offsets\",\"analyzer\":\"ik_max_word\",\"search_analyzer\":\"ik_max_word\",\"boost\":8},\"content\":{\"type\":\"attachment\",\"store\":\"true\",\"term_vector\":\"with_positions_offsets\",\"analyzer\":\"ik_max_word\",\"search_analyzer\":\"ik_max_word\",\"boost\":8}}}}";
+        CommonStatus status = client.CreateIndex("attachment_content",mapping,"AttachmentContent");
+        CommonLogger.consolePrint(status.getMessage());
+    }
+
+    public void testIndexAttachment()
+    {
+
+    }
+    
     public void buildTestIndex()
     {
         CommonLogger.consolePrint("Create elastic search client test ----------->");

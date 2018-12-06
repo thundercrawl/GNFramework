@@ -1,0 +1,11 @@
+1 list all index
+GET /_cat/indices?v
+
+2. delete index
+DELETE /[indexname]
+
+
+The delete index API can also be applied to more than one index, by either using a comma separated list, or on all indices (be careful!) by using _all or * as index.
+
+
+3.

@@ -3,6 +3,8 @@ package com.github.framework.util.file;
 import org.springframework.util.FileCopyUtils;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
 * @ClassName: FileUtil
@@ -283,5 +285,26 @@ public class FileUtil {
 	    }
 
 	    return tempFile;            
+	}
+	
+	public static List<String> listFilePathInDirectory(String path)
+	{
+		List<String> filenames = new ArrayList<String>();
+		
+
+	      File folder = new File(path);
+
+	      if (!folder.isDirectory())
+	      {
+	         throw new RuntimeException("folder not exist:"+path);
+	      }
+	      
+	     File[] files= folder.listFiles();
+	      for(File f:files)
+	      {
+	    	  filenames.add(f.getAbsolutePath());
+	      }
+		
+		return filenames;
 	}
 }
