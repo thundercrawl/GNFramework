@@ -1,0 +1,1 @@
+{ "AttachmentContent": { "properties": { "filename": { "type": "text", "store": "true", "term_vector": "with_positions_offsets", "analyzer": "ik_max_word", "search_analyzer": "ik_max_word", "boost": 8 }, "content": { "type": "attachment", "store": "true", "term_vector": "with_positions_offsets", "analyzer": "ik_max_word", "search_analyzer": "ik_max_word", "boost": 8 } } } }

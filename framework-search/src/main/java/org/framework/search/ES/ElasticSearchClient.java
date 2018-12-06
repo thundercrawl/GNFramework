@@ -154,5 +154,14 @@ public class ElasticSearchClient implements Serializable{
                 return status;
         }
 
+        public CommonStatus CreateAttachmentIndex()
+        {
+                CommonStatus status = new CommonStatus();
+                
+
+              
+                
+                return status;
+        }
 
 }
