@@ -28,7 +28,7 @@ public class ApplicationContexts {
     public static void init(String appName) {
         appInfo = new AppInfo();
         appInfo.appName = appName;
-        appInfo.logPath = "/opt/tomcat-" + appName + "/logs";
+        appInfo.logPath = "./logs";
         //日志输出目录
         System.setProperty("logPath", appInfo.logPath);
 
