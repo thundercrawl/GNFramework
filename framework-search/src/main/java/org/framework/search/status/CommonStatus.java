@@ -1,10 +1,10 @@
 package org.framework.search.status;
 
-public class CommonStatus {
+public class CommonStatus<T> {
 
 	private String message;
 	private int StatusCode;
-	
+	private T result;
 	
 	
 
